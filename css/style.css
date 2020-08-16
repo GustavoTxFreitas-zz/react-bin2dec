@@ -13,12 +13,6 @@ body, html {
     font-family: Roboto, sans-serif;
 }
 
-@media (min-width: 400px) {
-    body {
-      background-color: lightgreen;
-    }
-  }
-
 #container {
     width: 25em;
     height: 30em;
