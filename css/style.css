@@ -13,11 +13,15 @@ body, html {
     font-family: Roboto, sans-serif;
 }
 
+@media (min-width: 400px) {
+    body {
+      background-color: lightgreen;
+    }
+  }
+
 #container {
-    width: 100%;
-    height: 100%;
-    max-width: 25em;
-    max-height: 30em;
+    width: 25em;
+    height: 30em;
     padding: 1em 2em;
     border-radius: 1em;
     background-color: #071e3d;
