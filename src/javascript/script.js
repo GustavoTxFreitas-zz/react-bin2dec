@@ -1,18 +1,17 @@
-function Bin2Dec() {
+var inputElement = document.querySelector('input');
+var displayElement = document.querySelector('span');
 
-    var dec = ok = i = 0;
-    var bin = document.getElementById("input").value.trim();
+displayElement.style.fontSize = '3em';
 
-    for (i; i < bin.length; i++) 
-    {
-        if (bin[i] != "0" && bin[i] != "1")
-        {
-            ok = 1;
-            break;
+inputElement.onkeyup = function() {
+    var dec = 0;
+    var bin = inputElement.value.trim();
+
+    for (digits of bin) {
+        if(digits != '0' && digits != '1'){
+          return displayElement.innerText = 'non-binary';
         }
-        dec = dec * 2 + parseInt(bin[i]);
+        dec = dec*2 + parseInt(digits)
     }
-
-    document.getElementById("display")
-        .innerText = ok == 0 ? dec : "non-binary";
+    return displayElement.innerText =  dec;
 }
