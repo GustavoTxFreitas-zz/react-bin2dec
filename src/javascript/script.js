@@ -11,7 +11,7 @@ inputElement.onkeyup = function() {
         if(digits != '0' && digits != '1'){
           return displayElement.innerText = 'non-binary';
         }
-        dec = dec*2 + parseInt(digits)
+        dec = dec*2 + parseInt(digits);
     }
     return displayElement.innerText =  dec;
 }
