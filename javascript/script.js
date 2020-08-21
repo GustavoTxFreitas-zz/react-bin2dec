@@ -1,7 +1,19 @@
-var inputElement = document.querySelector('input');
+var inputElement = document.createElement('input');
 var displayElement = document.querySelector('span');
 
-displayElement.style.fontSize = '3em';
+inputElement.setAttribute('autofocus', 'autofocus');
+inputElement.setAttribute('type', 'text');
+inputElement.setAttribute('placeholder', 'ex.: 100101010');
+
+inputElement.style.width = '100%';
+inputElement.style.height = '3em';
+inputElement.style.border = 'none';
+inputElement.style.padding = '0 2em';
+inputElement.style.borderRadius = '2em';
+inputElement.style.backgroundColor = '#051831';
+
+displayElement.style.fontSize = '3.5em';
+
 
 inputElement.onkeyup = function() {
     var dec = 0;
@@ -15,3 +27,5 @@ inputElement.onkeyup = function() {
     }
     return displayElement.innerText =  dec;
 }
+
+document.querySelector('#main').appendChild(inputElement);
