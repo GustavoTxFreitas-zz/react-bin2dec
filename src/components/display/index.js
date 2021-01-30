@@ -3,7 +3,7 @@ import './index.css';
 function Display(params) {
     return(
         <div className="DisplayContainer">
-            <span className="DisplayValue">{params.value}</span>
+            <span className="DisplayValue">{params.children}</span>
         </div>
     )
 }
