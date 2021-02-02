@@ -1,58 +1,50 @@
-import { useState } from "react";
+import { useState } from 'react';
 
 import './App.css';
+import Text from './components/text';
 import Input from './components/input';
 import Display from './components/display';
+import AppContainer from './components/appContainer';
+import GlassContainer from './components/glassContainer';
 
 function App() {
-  const [inputValue, setInputValue] = useState(0);
-
-  // const conversion = (value) => {
-  //   let counter = 0, bin = value.trim();
-
-  //   for (let digits of bin) {
-  //     if (digits !== '0' && digits !== '1')
-  //       return NaN;
-  //     else
-  //       counter = counter * 2 + parseInt(digits);
-  //   }
-
-  //   return counter;
-  // };
-
-  const conversion = (value) => {
-    let counter = 0, bin = value.trim();
-
-    for (let digits of bin) {
-      if (digits !== '0' && digits !== '1')
-        return 'non-binary';
-      else
-        counter = counter * 2 + parseInt(digits);
-    }
-
-    return counter.toString();
-  };
+  const [inputValue, setInputValue] = useState('');
+  const [displayValue, setDisplayValue] = useState('');
 
   return (
-    <div id="container">
+    <AppContainer>
+      <GlassContainer>
+        <Text className='header'>binary to decimal<br></br>converter</Text>
 
-      <header>
-        <h1>Bin2Dec</h1>
-      </header>
+        <Display bin={inputValue} dec={displayValue}></Display>
 
-      <section id="main">
-        <Display>{inputValue}</Display>
         <Input
-          placeholder="ex.: 11111100101"
-          onchange={e => setInputValue(conversion(e.target.value))} />
-      </section>
+          id='binary-input'
+          label='Enter a binary number'
+          placeholder='ex.: 11111100101'
+          onchange={e => {
+            setInputValue(e.target.value);
+            setDisplayValue(conversion(e.target.value));
+          }} />
 
-      <footer>
-        <h2>Todos os direitos reservados <a href="https://github.com/GustavoTxFreitas">Gustavo Teixeira</a>.</h2>
-      </footer>
-    </div>
+        <Text className='footer'>Powered by&ensp;&bull;&ensp;<a href='https://github.com/GustavoTxFreitas'>Gustavo Teixeira</a></Text>
+      </GlassContainer>
+    </AppContainer>
 
   );
 }
+
+const conversion = (value) => {
+  let counter = 0, bin = value.trim();
+
+  for (let digits of bin) {
+    if (digits !== '0' && digits !== '1')
+      return 'non-binary';
+    else
+      counter = counter * 2 + parseInt(digits);
+  }
+
+  return counter.toString();
+};
 
 export default App;
