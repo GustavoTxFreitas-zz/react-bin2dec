@@ -1,0 +1,21 @@
+.DisplayContainer{
+    display: block;
+}
+
+.BinaryValue{
+    font-size: 1.4em;
+    margin: 0.5em 0;
+}
+
+.BinaryValue small{
+    font-size: 0.8em;
+}
+
+.DecimalValue{
+    font-size: 3em;
+    margin: 0.1em 0;
+}
+
+.DecimalValue small{
+    font-size: 0.5em;
+}
