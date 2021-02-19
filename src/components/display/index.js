@@ -12,7 +12,7 @@ function Display(params) {
                         </sub>
                     </div>
                     <div className="DecimalValue">
-                        {params.dec}
+                        {params.dec ? params.dec : "non-binary"}
                         <sub>
                             <small>(10)</small>
                         </sub>

@@ -6,13 +6,17 @@
   font-size: 1em;
 }
 
+.bull{
+  font-size: 0.9em;
+}
+
 a:visited,
 a:active,
 a:link {
-  color: #17b978;
+  color: #1acc6a;
   font-weight: 600;
 }
 
 a:hover {
-  color: #12915e;
+  color: #1c9e5d;
 }

@@ -27,7 +27,7 @@ function App() {
             setDisplayValue(conversion(e.target.value));
           }} />
 
-        <Text className='footer'>Powered by&ensp;&bull;&ensp;<a href='https://github.com/GustavoTxFreitas'>Gustavo Teixeira</a></Text>
+        <Text className='footer'>Powered by&ensp;<span className="bull">&bull;</span>&ensp;<a href='https://github.com/GustavoTxFreitas'>Gustavo Teixeira</a></Text>
       </GlassContainer>
     </AppContainer>
 
@@ -39,7 +39,7 @@ const conversion = (value) => {
 
   for (let digits of bin) {
     if (digits !== '0' && digits !== '1')
-      return 'non-binary';
+      return NaN;
     else
       counter = counter * 2 + parseInt(digits);
   }

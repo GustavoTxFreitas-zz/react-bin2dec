@@ -1,6 +1,8 @@
 section.GlassContainer {
-  width: 20em;
-  height: 70%;
+  width: 100%;
+  height: 100%;
+  max-width: 20em;
+  max-height: 30em;
   padding: 1.5em 1em;
   border-radius: 0.5em;
   
@@ -10,7 +12,7 @@ section.GlassContainer {
   justify-content: space-between;
 
   background-color: #fff1;
-  backdrop-filter: blur(5em);
+  backdrop-filter: blur(4em);
   border-top: 1px solid #fff1;
   border-left: 1px solid #fff1;
   box-shadow: 0 0.5em 0.5em #0002;
